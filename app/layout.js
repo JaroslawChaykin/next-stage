@@ -1,4 +1,5 @@
 import "./globals.css";
+import Header from "@/app/components/Header/Header";
 
 export const metadata = {
   title: "My App",
@@ -8,7 +9,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <main className={'container'}>
+          <Header/>
+          <div className={'px-6'}>
+              {children}
+          </div>
+        </main>
+      </body>
     </html>
   );
 }
