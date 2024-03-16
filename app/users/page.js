@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Title from "@/app/components/Title/Title";
 
 const getUsers = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/users')
@@ -12,7 +13,7 @@ export default async function Users() {
 
     return (
         <>
-            <h1 className={'text-4xl font-bold py-4'}>Пользователи</h1>
+            <Title Stage='h2' styles={'py-6'}>Пользователи</Title>
             <ul className={'mt-3 border-2 border-gray-300'}>
                 {
                     users && users.map(user => (

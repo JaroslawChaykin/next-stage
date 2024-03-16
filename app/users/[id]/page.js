@@ -1,3 +1,5 @@
+import Title from "@/app/components/Title/Title";
+
 const getUser = async (id) => {
     const response = await fetch('https://jsonplaceholder.typicode.com/users/' + id)
         .then(response => response.json())
@@ -10,7 +12,7 @@ export default async function User({params}) {
 
     return (
         <>
-            <h1 className={'text-4xl font-bold py-4'}>Пользователь</h1>
+            <Title Stage='h2' styles={'py-6'}>Пользователь</Title>
             <p>{user.name}</p>
         </>
     );
