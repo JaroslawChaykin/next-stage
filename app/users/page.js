@@ -8,6 +8,11 @@ const getUsers = async () => {
     return response
 }
 
+export const metadata = {
+    title: "Пользователи",
+    description: "Страница с пользователями",
+};
+
 export default async function Users() {
     const users = await getUsers();
 
