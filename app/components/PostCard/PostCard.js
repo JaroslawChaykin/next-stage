@@ -7,11 +7,11 @@ const getUserNameById = async (id) => {
 
     return response.name
 }
-const PostCard = async ({title, body, userId, id}) => {
+const PostCard = async ({title, body, userId, id, styles}) => {
     const userName = await getUserNameById(userId)
     return (
-        <div className={'my-2'}>
-            <div className={'flex justify-between bg-gray-700 text-white p-3'}>
+        <div className={'my-2 ' + styles}>
+            <div className={'flex justify-between items-center bg-gray-700 text-white p-3'}>
                 <Title Stage={'h6'} styles={''}>
                     <Link href={'users/' + userId}>{userName}</Link>
                 </Title>
@@ -20,8 +20,8 @@ const PostCard = async ({title, body, userId, id}) => {
                 </Link>
             </div>
             <div className={'border-2 border-t-0 p-3'}>
-                <p>{title}</p>
-                <p>{body}</p>
+                <p className={'text-wrap'}>{title}</p>
+                <p className={'text-wrap'}>{body}</p>
             </div>
         </div>
     );
