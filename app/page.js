@@ -9,7 +9,7 @@ const getPosts = async () => {
 }
 export default async function Home() {
     const posts = await getPosts()
-    console.log(posts)
+    
     return (
         <>
             <Title Stage='h2' styles={'py-6'}>Главная</Title>
