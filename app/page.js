@@ -1,21 +1,22 @@
 import Title from "@/app/components/Title/Title";
-import PostCard from "@/app/components/PostCard/PostCard";
+import PostCard from "./components/PostCard/PostCard";
 
 const getPosts = async () => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts/')
-        .then(response => response.json())
+    const response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts/"
+    ).then((response) => response.json());
 
-    return response
-}
+    return response;
+};
 export default async function Home() {
-    const posts = await getPosts()
-    
+    const posts = await getPosts();
+
     return (
         <>
-            <Title Stage='h2' styles={'py-6'}>Главная</Title>
-            {
-                posts && posts.map(post => (<PostCard {...post}/>))
-            }
+            <Title Stage="h2" styles={"py-6"}>
+                Главная
+            </Title>
+            {posts && posts.map((post) => <PostCard {...post} key={post.id} />)}
         </>
     );
 }
