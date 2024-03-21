@@ -13,10 +13,13 @@ export default async function Home() {
 
     return (
         <>
-            <Title Stage="h2" styles={"py-6"}>
+            <Title Stage="h2" bold styles={"py-12"}>
                 Главная
             </Title>
-            {posts && posts.map((post) => <PostCard {...post} key={post.id} />)}
+            <section>
+                {posts &&
+                    posts.map((post) => <PostCard {...post} key={post.id} />)}
+            </section>
         </>
     );
 }

@@ -10,7 +10,7 @@ const Header = () => {
                     "container m-0 flex justify-between items-center py-4 bg-white/50 backdrop-blur-md"
                 }
             >
-                <Title Stage="h6">Header</Title>
+                <Title Stage="h6">NEXT - Stage</Title>
                 <nav className={"flex gap-2"}>
                     <Link
                         href="/"

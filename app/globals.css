@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.post-card-shadow {
+    box-shadow: 0px 17.7px 24.5px rgba(0, 0, 0, 0.032),
+        0px 60px 196px rgba(0, 0, 0, 0.09);
+}
+
+.post-card-body-shadow {
+    box-shadow: 0px 0px 0.9px rgba(0, 0, 0, 0.035),
+        0px 0px 7px rgba(0, 0, 0, 0.07);
+}
