@@ -13,7 +13,8 @@ const PostCard = async ({ title, body, userId, id, styles = "" }) => {
     return (
         <div
             className={
-                "post-card-shadow my-3 border-b-2 rounded-lg p-6 " + styles
+                "post-card-shadow bg-white my-3 border-b-2 rounded-lg p-6 " +
+                styles
             }
         >
             <div className={"flex justify-between items-center p-3 pb-0"}>
