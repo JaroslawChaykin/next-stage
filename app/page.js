@@ -1,13 +1,12 @@
 import Title from "@/app/components/Title/Title";
 import PostCard from "./components/PostCard/PostCard";
+import { NextAPI } from "./NextAPI/NextAPI";
 
 const getPosts = async () => {
-    const response = await fetch(
-        "https://jsonplaceholder.typicode.com/posts/"
-    ).then((response) => response.json());
-
+    const response = await new NextAPI().collection("posts").getList();
     return response;
 };
+
 export default async function Home() {
     const posts = await getPosts();
 
