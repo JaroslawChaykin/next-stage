@@ -18,7 +18,7 @@ export default async function Users() {
 
     return (
         <>
-            <Title Stage="h2" styles={"py-6"}>
+            <Title Stage="h2" bold styles={"py-12"}>
                 Пользователи
             </Title>
             <ul className={"mt-3 border-2 border-gray-300"}>
